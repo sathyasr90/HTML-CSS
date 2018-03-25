@@ -1,0 +1,377 @@
+@charset "utf-8";
+/* Stylesheet for Bas Consulting
+	Created By Bas Consulting 
+	Copyright Bas Consulting
+*/
+
+/* Default Style Reset by Eric Meyer -  */
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td { margin: 0; padding: 0; border: 0; outline: 0; font-weight: inherit; font-style: inherit; font-size: 100%; 	font-family: inherit; vertical-align: baseline;
+}
+
+
+/* remember to define focus styles! */
+:focus { outline: 0;}
+body { line-height: 1; color: #555; background: white;}
+ol, ul { list-style: none;}
+/* tables still need 'cellspacing="0"' in the markup */
+table { border-collapse: separate; border-spacing: 0;}
+caption, th, td { text-align: left; font-weight: normal; }
+blockquote:before, blockquote:after, q:before, q:after { content: "";}
+blockquote, q { quotes: "" "";}
+
+/* global styles */
+
+@font-face {
+ font-family:impact;
+ src: url("../font/impact.ttf") /* EOT file for IE */
+}
+
+@font-face {
+ font-family:FjallaOne;
+ src: url("../font/FjallaOne-Regular.otf") /* EOT file for IE */
+}
+
+body{ background:#f8f8f8 url(../images/body-bg.png)repeat left top; font:normal normal normal 15px/1.5em Arial, sans-serif;}
+.clear{ clear:both;}
+.last{ margin:0px!important; padding:0px!important;}
+strong{font-weight:bold;}
+
+/* Main Container for Home */
+#topStrip{width:100%; height:24px;background:#008bc2;margin:-10px 0px 0px 0px;}
+#topStrip_inner{width:960px; height:24px;background:#008bc2;margin:0 auto;}
+#topStrip_inner p a {font-size:15px; padding:3px 0px 0px 0px;color:#fff;text-align:justify;float:right;text-decoration:none;font-weight:bold;}
+#wrapper{width:960px; overflow:hidden; position:relative; margin:0 auto;}
+#content{width:958; overflow:hidden; border:1px solid #cbd9e8; background:#f8f8f8;}
+#pageMainContent{float:left; width:640px;}
+#secondryNav{width:300px; float:right; margin-left:15px;}
+#footer-content{width:100%; background:#863393; overflow:hidden; border-top:4px solid #6b007c;}
+#pageFooter{width:960px; margin:0 auto; position:relative;}
+#project_title{width:960px; height:160px;float:left;margin:20px 0px 30px 0px;border-top:1px solid #999;border-bottom:1px solid #999;}
+#computer_top{width:960px; height:274px;float:left;margin:0px 0px 30px 0px;background:url(../images/banners/flash3.jpg);}
+/* header styles */
+header#pageHeader{height:140px; float:left;}
+h1#logo{width:655px; height:59px; padding-top:36px; overflow:hidden;}
+h1#logo a{width:655px; height:59px; display:block; text-indent:-9999px; background:url(../images/bas-consulting-logo.png)left top no-repeat;}
+.contactNo{position:absolute; right:0px; top:50px; z-index:101;}
+.contactNo ul li{list-style:none; line-height:18px; text-align:left;}
+.contactNo ul li span{font-weight:bold;}
+.headCol{color:#003973; padding-bottom:5px; border-bottom:1px dotted #d3d3d3; margin-bottom:5px; display:inline-block;}
+
+/* nav styles */
+/*nav#mainNav{height:74px; border-top:1px solid #c3d4e4; float:left; width:100%;}
+nav#mainNav ul{float:right;}
+nav#mainNav li{float;left; display:inline-block;}
+nav#mainNav li a{display:block; line-height:40px; text-decoration:none; color:#003973; padding:0 10px; margin:14px 5px;}
+nav#mainNav li a:hover, nav#mainNav li a.active{background:#003973; color:#fff;}*/
+nav{position:relative; z-index:99999;}
+nav ul ul li{list-style:none;}
+/* slider/banner styles */
+#bannerHome{ position:relative; height:360px; margin:0; z-index:9999;}
+  #slides {
+	position:absolute;
+	top:0px;
+	left:0px;
+	z-index:100;
+	}
+.slides_container {
+	width:958px;
+	height:311px;
+	overflow:hidden;
+	position:relative;
+	display:none;
+	border:1px solid #c6d5e6;
+	background:#fff;
+}
+#slides .slide {
+	width:960px;
+	height:360px;
+	display:block;
+	margin:0; padding:0;
+	position:relative;
+	z-index:100;
+}
+#slides .slide .bannerImg{
+	float:left;
+	margin:29px 35px;
+	overflow:hidden;
+}
+#slides .slide .bannerText{
+	float:left;
+	width:500px;
+	padding:80px 0 0 15px;
+}
+#slides .slide .bannerText h2{
+	font:normal normal bold 52px/1.1em Arial, sans-serif;
+}
+#slides .slide .bannerText p{
+	font-size: 13px;
+	margin:15px 0 0 0;
+	padding:0 40px 0 0;
+	color:#676767;
+}
+#slides .slide .bannerText p.button{
+	margin:30px 0 0 0;
+	}
+#slides .slide .bannerText p.button a{
+	font-size:15px;
+	color:#ffffff;
+	background-color:#f2151c;
+	padding:10px 15px;
+	text-decoration:none;
+}
+.pagination {
+	margin:0;
+	position:absolute;
+	left:50%;
+	width:320px;
+	height:16px;
+	bottom:-25px;
+	z-index:1000;
+	margin-left:-128px;
+}
+
+.pagination li {
+	float:left;
+	margin:0 1px;
+	list-style:none;
+}
+
+.pagination li a {
+	display:block;
+	width:16px;
+	height:3px;
+	padding-top:12px;
+	background-image:url(../images/pagination.png);
+	background-position:0 0;
+	float:left;
+	overflow:hidden;
+	
+}
+
+.pagination li.current a {
+	background-position:0 -15px;
+}
+
+/*
+	Next/prev buttons
+*/
+
+#slides .next,#slides .prev {
+	position:absolute;
+	top:178px;
+	left:0px;
+	width:45px;
+	height:44px;
+	display:block;
+	z-index:101;
+	overflow:hidden; 
+	text-indent:-9999px; 
+	background-position:left top;
+	background-repeat:no-repeat;
+}
+#slides a.prev{ background-image:url(../images/previous-button.png); }
+#slides a.next{ background-image:url(../images/next-button.png); }
+#slides .next {
+	left:916px;
+}
+#slides a.next:hover,#slides a.prev:hover{ background-position:left -43px;}
+
+
+/* certification logo display styels */
+
+
+/* certification logo display styels */
+section#certifications{ height:235px; float:left;}
+h3{font-size:19px; color:#003973; text-align:center; margin:10px 0 20px 0; width:960px;}
+article#certified{height:140px; border:1px solid #c8d6e6; background:#fbfbfb; float:left; width:958px; }
+article#certified ul{margin:0 auto; }
+article#certified li{float:left; display:inline-block;}
+article#certified li:first-child{padding-left:15px;}
+article#certified li img{line-height:140px; margin:22px 10px;}
+
+/* page content styles */
+/* main cotnent styles */
+article.content{padding:30px 30px 10px 30px;border-bottom:1px dotted #9bb3cc;}
+h4{font-size:18px; color:#003973; padding-bottom:5px; margin-bottom:15px; border-bottom:1px dotted #9bb3cc;}
+p{font-size:14px; color:#616161; line-height:130%; margin:10px 0; text-align:justify;}
+.viewMore{color:inherit; text-decoration:none; background:#d7d8db; height:25px; padding:7px 10px; font-size:12px; line-height:30px;}
+a.viewMore:hover{background:#67b7f8; color:#022671;}
+li{font-size:14px; color:#616161; list-style:disc; list-style-position:inside;}
+
+/* courses offered side nav styles */
+.course-offered{background:url(../images/courses-offer-nav-bg.png) left top repeat-y; }
+.course-offered ul li{list-style:none; text-indent:20px; line-height:30px; border-bottom:1px dotted #cfd8ed;}
+.course-offered ul li a{text-decoration:none; color:inherit; line-height:30px; display:block;}
+.course-offered ul li a:hover{ color:#022671; line-height:30px; display:block; background:#d4dfff;}
+.course-offered h5{font-size:14px; font-weight:bold; color:#0155b9; text-indent:20px; margin-top:15px;}
+.course-offered h5 a{text-decoration:none; color:inherit;}
+.course-offered h5 a:hover, .course-offered h5 a:hover span {text-decoration:underline;}
+.course-offered h5 span{display:inline-block;}
+.course-offered p{color:#6c6c6c; padding:0 20px; text-align:left;}
+p.itil-calendar a{text-decoration:none;font-weight:bold; color:#022671;}
+p.itil-calendar a:hover{color:#0155b9; text-decoration:underline;}
+.course-offered ol li{border-bottom:none; line-height:130%;}
+.register-button{margin:20px 0 20px 30px; display:block;}
+.bdrNone{border-bottom:none !important;}
+.border{border-bottom:1px dotted #cfd8ed;}
+/*footer styles here */
+
+
+#file-upload{width:220px; height:80px; margin:0px 0px 0px 50px; float:left;}
+
+#file-download{width:200px; height:auto; margin:20px 50px 58px 50px; float:left;}
+#file-upload h3{font-size:20px;text-align:justify;color:#09529a;font-family:impact;padding:0px 0px 0px 0px;font-weight:normal;}
+#file-download h3{font-size:20px;text-align:justify;color:#09529a;font-family:impact;padding:0px 0px 0px 0px;font-weight:normal;}
+
+input[type=file]{font-size:12px;margin:0px 20px 0px 0px;width:200px;text-align:center;height:25px;color:#000;float:left;float:right;}
+
+#file-download ul{list-style:none;float:left;padding:0px 0px 0px 0px;}
+#file-download li{float:left;padding:0px 0px 0px 0px;text-align:justify;}
+#file-download li a{font-family:FjallaOne;text-decoration:none;color:#008bc2;font-size:18px;padding:0px 20px 0px 20px;}
+#file-download li a:hover {color:#222;background:none;}
+
+#file-download li ul {
+    display:none;
+position:absolute;
+}
+#file-download li:hover ul{
+    display:block;
+background:#ece8dc;
+height:auto; width:auto;
+padding:0px 0px 0px 0px;
+}
+
+
+/*footer styles here */
+#footer-content1{width:100%; background:url(../images/footer_bg.png); overflow:hidden; border-top:4px solid #008bc2;}
+#footer1
+{
+width:960px;
+height:290px;
+
+margin:0 auto;
+
+}
+#footer_left
+{
+width:300px;
+height:240px;
+float:left;
+margin:15px 0px 0px 0px;
+
+}
+h2{font-size:14px; font-weight:bold; color:#f8f622; border-bottom:1px dotted #f8f622; margin-bottom:5px;text-align:justify;}
+#footer_left .para1{font-size:12px; padding:10px 5px 0px 0px;color:#fff;text-align:justify;}
+.copyrightInfo{float:left; color:#f8f622; margin-top:20px; border-top:1px dotted #f8f622; padding-top:5px;font-size:12px; }
+
+#footer_center
+{
+width:300px;
+height:240px;
+float:left;
+margin:15px 0px 0px 30px;
+
+}
+
+#footer_center ul{float:left;list-style:none;padding:0px 0px 0px 0px;}
+#footer_center li{float:left;padding:0px 0px 0px 0px;list-style:none;}
+#footer_center .para{float:right;text-align:justify;font-size:13px;color:#fff;padding:8px 10px 0px 15px;}
+#footer_center .para:hover {text-decoration:underline;color:#09529a;}
+#footer_right
+{
+width:300px;
+height:240px;
+float:left;
+margin:15px 0px 0px 30px;
+
+}
+.name
+{
+font-size:13px;
+padding:0px 0px 0px 0px;
+color:#fff;
+line-height:150%;
+font-weight:normal;
+text-align:justify;
+}
+.name a
+{
+font-size:13px;
+padding:0px 0px 0px 0px;
+color:#fff;
+line-height:150%;
+font-weight:normal;
+text-align:justify;
+text-decoration:none;
+}
+.name a:hover {color:#d3d3d3;}
+.name1
+{
+font-size:13px;
+color:#fff;
+margin:12px 0px 0px 0px;
+text-align:justify;
+} 
+.name1 a
+{
+font-size:11px;
+padding:10px 0px 0px 0px;
+color:#fff;
+line-height:150%;
+font-weight:normal;
+text-align:justify;
+text-decoration:none;
+}
+.name1 a:hover
+{
+font-size:11px;
+padding:10px 0px 0px 0px;
+color:#fff;
+line-height:150%;
+font-weight:normal;
+text-align:justify;
+text-decoration:underline;
+}
+#contact
+{
+width:230px;
+height:auto;
+float:left;
+margin:20px 0px 0px 50px;
+}
+#contact h3{font-size:20px;text-align:justify;color:#09529a;font-family:impact;padding:0px 0px 0px 0px;font-weight:normal;}
+label{color: #444;text-align:left;float:left;padding:0px 20px 0px 0px;line-height:150%;font-size:13px;}
+input{color:#000;text-align:justify;margin:0px 0px 10px 15px;width:200px;height:25px;border:1px solid #ccc;font-size:12px;border-radius:5px;}
+textarea{font-family: arial;color:#000;text-align:justify;float:left;margin:0px 10px 0px 15px;width:200px;border:1px solid #ccc;height:50px;font-size:13px;padding:0px 0px 0px 0px;border-radius:5px;}
+input[type=reset]{font-size:12px;margin:10px 20px 15px 0px;padding:0px 0px 0px 0px;width:60px;text-align:center;height:25px;color:#000;font-weight:bold;background:#fff;float:left;border-radius:6px;float:right;}
+input[type=reset]:hover {background:#008bc2;color:#fff;}
+
+input[type=submit]{font-size:12px;margin:10px 20px 15px 0px;padding:0px 0px 0px 0px;width:60px;text-align:center;height:25px;color:#000;font-weight:bold;background:#fff;float:left;border-radius:6px;float:right;}
+input[type=submit]:hover {background:#008bc2;color:#fff;}
+
+
+.title{font-size:16px;
+font-weight:bold;
+padding-bottom:5px;
+border-bottom:1px solid #f3f3f3;
+color:#003973;
+margin-top:30px;}
+address{color:#666;margin-bottom:30px;}
+.dipCourses li a{color:inherit; text-decoration:none;}
+.dipCourses li a:hover{color:#00aeef; text-decoration:underline;}
+.dipcourseDetail{padding:20px; background:white; border:1px solid #d3d3d3;}
+.dipcourseDetail img{margin:10px 0;}
+.dipcourseDetail h3{font-size:14px; font-weight:bold; text-align:left; margin-bottom:0;}
+.dipcourseDetail h5{color:#003973; font-weight:bold;}
+.dipcourseDetail ol li{list-style:decimal; list-style-position:inside;}
+.computerit-tag{font-weight:bold; font-size:12px; border-bottom:1px solid #d3d3d3; padding-bottom:5px; display:block; width:270px; margin-bottom:5px;}
+
+
+
+
+
+
